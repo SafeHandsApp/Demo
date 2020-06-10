@@ -86,21 +86,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <button class="open-button" onclick="openForm()">Chat</button>
 
 <div class="chat-popup" id="myForm">
-      <!-- ********************** Begin Pega content ********************** -->
-<script src ='https://11b6anmn.pegace.net/prweb/app/SafeHands_3612/?pyActivity=pzIncludeMashupScripts'></script>
-<div  
-data-pega-gadgetname ='PegaGadget' 
-data-pega-action ='createNewWork' 
-data-pega-action-param-classname ='Work-Channel-Chat' 
-data-pega-action-param-flowname ='pyStartCase' 
-data-pega-isdeferloaded ='false' 
-data-pega-applicationname ='SafeHands' 
-data-pega-threadname ='STANDARD' 
-data-pega-resizetype ='fixed' 
-data-pega-url ='https://11b6anmn.pegace.net/prweb/PRChat/app/SafeHands_3612/' 
-data-pega-action-param-parameters ='{"channelId":"bot8101e4ebfd234ee389669c88e28cae75"}' ></div>
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
 
-<!-- ********************** End Pega content ********************** -->
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
 </div>
 
 <script>
@@ -115,33 +109,3 @@ function closeForm() {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
